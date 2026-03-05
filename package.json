@@ -1,0 +1,58 @@
+{
+  "name": "@sig-ui/core",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sig-ui/core.git"
+  },
+  "homepage": "https://github.com/sig-ui/core",
+  "bugs": "https://github.com/sig-ui/core/issues",
+  "description": "Pure math, color science, design tokens, and state machines for SigUI",
+  "author": "SigID, gentix.dev",
+  "keywords": [
+    "sigui",
+    "design-system",
+    "design-tokens",
+    "ui",
+    "color-science",
+    "oklch",
+    "state-machines"
+  ],
+  "files": [
+    "src",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": { "types": "./src/index.d.ts", "default": "./src/index.js" },
+    "./color": { "types": "./src/color.d.ts", "default": "./src/color.js" },
+    "./contrast": { "types": "./src/contrast.d.ts", "default": "./src/contrast.js" },
+    "./palette": { "types": "./src/palette-export.d.ts", "default": "./src/palette-export.js" },
+    "./cvd": { "types": "./src/cvd-export.d.ts", "default": "./src/cvd-export.js" },
+    "./interpolate": { "types": "./src/interpolate.d.ts", "default": "./src/interpolate.js" },
+    "./tokens": { "types": "./src/tokens.d.ts", "default": "./src/tokens.js" },
+    "./typography": { "types": "./src/typography-export.d.ts", "default": "./src/typography-export.js" },
+    "./elevation": { "types": "./src/elevation-export.d.ts", "default": "./src/elevation-export.js" },
+    "./spacing": { "types": "./src/spacing-export.d.ts", "default": "./src/spacing-export.js" },
+    "./motion": { "types": "./src/motion-export.d.ts", "default": "./src/motion-export.js" },
+    "./interactive": { "types": "./src/interactive-export.d.ts", "default": "./src/interactive-export.js" },
+    "./i18n": { "types": "./src/i18n-export.d.ts", "default": "./src/i18n-export.js" },
+    "./machines": { "types": "./src/machines/index.d.ts", "default": "./src/machines/index.js" },
+    "./performance": { "types": "./src/performance-export.d.ts", "default": "./src/performance-export.js" },
+    "./icons": { "types": "./src/icons-export.d.ts", "default": "./src/icons-export.js" },
+    "./harmony": { "types": "./src/harmony/index.d.ts", "default": "./src/harmony/index.js" },
+    "./alpha": { "types": "./src/alpha/index.d.ts", "default": "./src/alpha/index.js" },
+    "./accessibility": { "types": "./src/accessibility-export.d.ts", "default": "./src/accessibility-export.js" },
+    "./gradient-presets": { "types": "./src/gradient-presets-export.d.ts", "default": "./src/gradient-presets-export.js" },
+    "./runtime/animate": { "types": "./src/runtime/animate.d.ts", "default": "./src/runtime/animate.js" },
+    "./runtime/spacing": { "types": "./src/runtime/spacing.d.ts", "default": "./src/runtime/spacing.js" }
+  },
+  "scripts": {
+    "test": "bun test"
+  }
+}
