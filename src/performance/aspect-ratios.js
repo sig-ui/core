@@ -42,6 +42,7 @@ export function getAspectRatioNames() {
  * @returns {Record<string, string>}
  */
 export function getAspectRatioCSS() {
+  /** @type {Record<string, string>} */
   const result = {};
   for (const ratio of ASPECT_RATIOS) {
     result[`--aspect-${ratio.name}`] = ratio.cssValue;

@@ -4,6 +4,7 @@
  * SigUI core spacing module for scale.
  * @module
  */
+/** @type {ReadonlyArray<readonly [string, number]>} */
 const SCALE_PX_VALUES = [
   ["0", 0],
   ["px", 1],
@@ -22,6 +23,7 @@ const SCALE_PX_VALUES = [
   ["20", 80],
   ["24", 96]
 ];
+/** @type {ReadonlyArray<readonly [string, number]>} */
 const EXTENDED_PX_VALUES = [
   ["2.5", 10],
   ["3.5", 14],

@@ -43,6 +43,7 @@ import { toOklch } from "./color-space/oklch.js";
 export function composePalette(primary, options = {}) {
   const { alphaVariants = false, ...themeOptions } = options;
   const theme = generateFullPalette(primary, themeOptions);
+  /** @type {PaletteMap} */
   const palettes = {};
   for (const [name, result] of Object.entries(theme.palettes)) {
     palettes[name] = { ramp: result.ramp, formatted: result.formatted };
@@ -52,6 +53,7 @@ export function composePalette(primary, options = {}) {
   let alphaRamps;
   if (alphaVariants) {
     const bgOklch = toOklch(theme.background);
+    /** @type {AlphaRampMap} */
     alphaRamps = {};
     for (const [name, result] of Object.entries(theme.palettes)) {
       alphaRamps[name] = generateAlphaRamp(result.ramp, bgOklch);

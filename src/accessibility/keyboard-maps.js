@@ -118,6 +118,8 @@ export const KEYBOARD_MAPS = {
     typeahead: false
   }
 };
+/** @typedef {keyof typeof KEYBOARD_MAPS} KeyboardMapName */
+/** @typedef {(typeof KEYBOARD_MAPS)[KeyboardMapName]} KeyboardMap */
 /**
  * getKeyboardMap.
  * @param {KeyboardMapName} name

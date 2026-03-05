@@ -4,6 +4,7 @@
  * SigUI core accessibility module for config.
  * @module
  */
+/** @typedef {"A" | "AA" | "AAA"} ComplianceLevel */
 /**
  * getDefaultAccessibilityConfig.
  * @returns {AccessibilityConfig}

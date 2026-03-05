@@ -33,6 +33,7 @@ export function fluidFontSize(minRem, maxRem, options) {
 export function deriveFluidMaxRatio(scaleRatio) {
   return Math.pow(scaleRatio, 1.2);
 }
+/** @type {ReadonlyArray<readonly [string, number]>} */
 const SCALE_STEPS = [
   ["2xs", -3],
   ["xs", -2],
@@ -61,6 +62,7 @@ export function fluidTypeScale(options) {
   const maxRatio = options?.maxRatio ?? (options?.scaleRatio ? deriveFluidMaxRatio(options.scaleRatio) : 1.2);
   const minVw = options?.minVw ?? 20;
   const maxVw = options?.maxVw ?? 90;
+  /** @type {Record<string, string>} */
   const result = {};
   for (const [name, step] of SCALE_STEPS) {
     const sizeMin = baseMin * Math.pow(minRatio, step);

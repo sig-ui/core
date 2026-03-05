@@ -7,7 +7,7 @@
 const DEFAULT_BASE_UNIT = 4;
 /**
  * computeVerticalRhythm.
- * @param {{ baseUnit?: number }} options
+ * @param {{ baseUnit?: number }} [options]
  * @returns {VerticalRhythmResult}
  */
 export function computeVerticalRhythm(options) {

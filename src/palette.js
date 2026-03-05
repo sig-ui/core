@@ -43,8 +43,8 @@ export function generatePalette(baseColor, options) {
     hueBlend = 0,
     format = "hex"
   } = options;
-  const base = toOklch(baseColor);
-  const bg = toOklch(background);
+  const base = typeof baseColor === "string" ? toOklch(baseColor) : baseColor;
+  const bg = typeof background === "string" ? toOklch(background) : background;
   const ramp = generateShadeRamp(base, {
     mode,
     background: bg,
@@ -56,6 +56,7 @@ export function generatePalette(baseColor, options) {
     strictWCAG
   });
   const stops = extendedStops ? ALL_STOPS : STANDARD_STOPS;
+  /** @type {FormattedRamp} */
   const formatted = {};
   for (const stop of stops) {
     const shade = ramp[stop];

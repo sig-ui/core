@@ -99,7 +99,7 @@ export const CORE_ICON_MANIFEST = [
 /**
  * resolveIconName.
  * @param {string} name
- * @param {Record<string, string>} customAliases
+ * @param {Record<string, string>} [customAliases]
  * @returns {string | undefined}
  */
 export function resolveIconName(name, customAliases) {

@@ -32,7 +32,9 @@ function resolveEasing(easing) {
   return map[easing] ?? easing;
 }
 function toWaapiFrames(keyframes) {
+  /** @type {Keyframe} */
   const from = {};
+  /** @type {Keyframe} */
   const to = {};
   for (const [prop, value] of Object.entries(keyframes)) {
     if (Array.isArray(value)) {
@@ -126,7 +128,7 @@ export function inView(target, callback, options) {
  * @returns {() => void}
  */
 export function drag(element, options) {
-  const el = element;
+  const el = /** @type {HTMLElement} */ (element);
   const axis = options?.axis;
   let startX = 0;
   let startY = 0;
@@ -234,7 +236,7 @@ export function swipe(element, options) {
 }
 /**
  * onScroll.
- * @param {(info: ScrollInfo)} callback
+ * @param {(info: ScrollInfo) => void} callback
  * @param {ScrollProgressOptions} options
  * @returns {() => void}
  */
@@ -268,7 +270,7 @@ export function onScroll(callback, options) {
 }
 /**
  * onScrollView.
- * @param {(info: ScrollInfo)} callback
+ * @param {(info: ScrollInfo) => void} callback
  * @param {ScrollViewProgressOptions} options
  * @returns {() => void}
  */

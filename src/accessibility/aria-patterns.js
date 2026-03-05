@@ -171,7 +171,9 @@ export const ARIA_PATTERNS = {
     ]
   }
 };
-const PATTERN_NAMES = Object.keys(ARIA_PATTERNS);
+/** @typedef {keyof typeof ARIA_PATTERNS} AriaPatternName */
+/** @typedef {(typeof ARIA_PATTERNS)[AriaPatternName]} AriaPattern */
+const PATTERN_NAMES = /** @type {AriaPatternName[]} */ (Object.keys(ARIA_PATTERNS));
 /**
  * getAriaPattern.
  * @param {AriaPatternName} name
